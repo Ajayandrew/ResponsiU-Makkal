@@ -179,8 +179,3 @@ Each team member builds **one step** of the booking journey using:
 - JavaScript logic
 - User-focused design
 
----
-
-## 🎤 One-Line Explanation (For Mentor)
-> “Our project is an activity booking website like GetYourGuide, where users explore experiences, check availability, select slots, enter details, and view bookings.”
-
