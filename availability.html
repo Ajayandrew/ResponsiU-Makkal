@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Availability & Slot Booking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="availability.css">
+</head>
+
+<body>
+
+ <!-- Header -->
+   <header>
+  <div class="header-container">
+
+    <div class="logo">
+      <img src="./Images/Header-image.svg" alt="Logo" height="38">
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="activity.html">Activity</a>
+      <a href="availability.html">Availability</a>
+      <a href="traveller.html">Traveller</a>
+      <a href="bookings.html">My Bookings</a>
+    </nav>
+
+  </div>
+</header>
+
+
+
+
+  <h1>Book your slots</h1>
+<!-- PLACES GRID -->
+<div class="places">
+  <div class="place-card" data-index="0">
+    <img src="./images/Jaipur.png" alt="Jaipur Heritage Walk">
+    <div class="content">
+      <h3>Jaipur Heritage Walk</h3>
+      <p>Guide: Ramesh Kumar</p>
+      <p>₹500/person</p>
+      <p>⭐ 4.5</p>
+    </div>
+  </div>
+
+  <div class="place-card" data-index="1">
+    <img src="./images/Varanasi.png" alt="Varanasi Ghat Tour">
+    <div class="content">
+      <h3>Varanasi Ghat Tour</h3>
+      <p>Guide: Sunita Verma</p>
+      <p>₹400/person</p>
+      <p>⭐ 4.2</p>
+    </div>
+  </div>
+
+  <div class="place-card" data-index="2">
+    <img src="./images/Goa.png" alt="Goa Beach Adventure">
+    <div class="content">
+      <h3>Goa Beach Adventure</h3>
+      <p>Guide: Alex Fernandes</p>
+      <p>₹700/person</p>
+      <p>⭐ 4.6</p>
+    </div>
+  </div>
+
+  <div class="place-card" data-index="3">
+    <img src="./images/Mysore.png" alt="Mysore Palace Tour">
+    <div class="content">
+      <h3>Mysore Palace Tour</h3>
+      <p>Guide: Priya Reddy</p>
+      <p>₹450/person</p>
+      <p>⭐ 4.4</p>
+    </div>
+  </div>
+
+  <div class="place-card" data-index="4">
+    <img src="./images/Kerala.png" alt="Kerala Backwater Cruise">
+    <div class="content">
+      <h3>Kerala Backwater Cruise</h3>
+      <p>Guide: Ajay Menon</p>
+      <p>₹800/person</p>
+      <p>⭐ 4.7</p>
+    </div>
+  </div>
+
+  <div class="place-card" data-index="5">
+    <img src="./images/Rishikesh Adventure.jpg" alt="Rishikesh Adventure">
+    <div class="content">
+      <h3>Rishikesh Adventure</h3>
+      <p>Guide: Sunil Sharma</p>
+      <p>₹600/person</p>
+      <p>⭐ 4.5</p>
+    </div>
+  </div>
+
+  <div class="place-card" data-index="6">
+    <img src="./images/Ooty.png" alt="Jaipur Palace Tour">
+    <div class="content">
+      <h3>Ooty Hills</h3>
+      <p>Guide: Meena Singh</p>
+      <p>₹550/person</p>
+      <p>⭐ 4.3</p>
+    </div>
+  </div>
+
+  <div class="place-card" data-index="7">
+    <img src="./images/Kanyakumari Sunrise.jpg" alt="Udaipur Lake Tour">
+    <div class="content">
+      <h3>Kanyakumari Sunrise</h3>
+      <p>Guide: Ankit Sharma</p>
+      <p>₹750/person</p>
+      <p>⭐ 4.6</p>
+    </div>
+  </div>
+
+  <div class="place-card" data-index="8">
+    <img src="./images/Darjeeling Tea Trail.jpg" alt="Darjeeling Tea Tour">
+    <div class="content">
+      <h3>Darjeeling Tea Tour</h3>
+      <p>Guide: Priya Das</p>
+      <p>₹650/person</p>
+      <p>⭐ 4.4</p>
+    </div>
+  </div>
+
+  <div class="place-card" data-index="9">
+    <img src="./images/Hampi.png" alt="Hampi Ruins Tour">
+    <div class="content">
+      <h3>Hampi Ruins Tour</h3>
+      <p>Guide: Raghav Rao</p>
+      <p>₹500/person</p>
+      <p>⭐ 4.5</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- BOOKING SUMMARY -->
+<div class="summary">
+  <div class="summary-list" id="summaryList"></div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="bookingModal">
+
+  <div class="modal-box">
+
+    <!-- IMAGE TOP (DESKTOP LEFT / MOBILE TOP) -->
+    <div class="modal-image">
+      <img id="modalImage" alt="Selected place">
+       <span class="close" onclick="closeModal()">×</span>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="modal-body">
+      <span class="close" onclick="closeModal()">×</span>
+      <h2 id="placeTitle"></h2>
+      <p class="meta" id="modalGuide"></p>
+      <p class="meta" id="placeRating"></p>
+      <p class="meta price-text" id="placePrice"></p>
+
+      <label>Date</label>
+      <input type="date" id="date">
+      <div class="error" id="dateError"></div>
+
+      <label>Time Slot</label>
+      <div class="slots" id="slots"></div>
+      <div class="error" id="slotError"></div>
+
+      <label>Guests</label>
+      <input type="number" id="guests" min="1" value="1">
+      <div class="error" id="guestsError"></div>
+
+      <div class="error" id="duplicateError"></div>
+
+      <div class="total-row">
+        Total: ₹<span id="total">0</span>
+      </div>
+
+      <button class="confirm-btn" onclick="confirmBooking()">
+        Confirm Sloat Booking
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+    <!-- Footer-Section -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Language and Currency Section -->
+                <div class="footer-section">
+                    <div class="dropdown-group">
+                        <div class="dropdown-wrapper">
+                            <label for="language">Language</label>
+                            <select id="language">
+                                <option value="en-us">English (United States)</option>
+                                <option value="en-gb">English (United Kingdom)</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="it">Italiano</option>
+                            </select>
+                        </div>
+                        <div class="dropdown-wrapper">
+                            <label for="currency">Currency</label>
+                            <select id="currency">
+                                <option value="inr">Indian Rupee (₹)</option>
+                                <option value="usd">US Dollar ($)</option>
+                                <option value="eur">Euro (€)</option>
+                                <option value="gbp">British Pound (£)</option>
+                                <option value="jpy">Japanese Yen (¥)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Section -->
+                <div class="footer-section">
+                    <h3>Mobile</h3>
+                    <div class="mobile-buttons">
+                        <a href="https://play.google.com/store/search?q=get+your+guide&c=apps&hl=en_IN"
+                            class="app-button1">
+                            <img src="./Images/Google_Play_Store.png" alt="Get it on Google Play">
+                        </a>
+                        <a href="https://apps.apple.com/in/app/getyourguide-plan-book/id705079381" class="app-button2">
+                            <img src="./Images/the-app-store.svg" alt="Download on the App Store">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="./contact.html">Contact</a>
+                    <a href="./legal notice.html">Legal Notice</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#cookies">Cookies and Marketing Preferences</a>
+                    <a href="#terms">General Terms and Conditions</a>
+                    <a href="#dsa">Information according to the Digital Services Act</a>
+                    <a href="#sitemap">Sitemap</a>
+                    <a href="#privacy-info">Do not Sell or Share my Personal Information</a>
+                </div>
+
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#about">About Us</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#press">Press</a>
+                    <a href="#gift-cards">Gift Cards</a>
+                    <a href="#explorer">Explorer</a>
+                </div>
+
+                <!-- Work With Us Section -->
+                <div class="footer-section">
+                    <h3>Work With Us</h3>
+                    <a href="#supply-partner">As a Supply Partner</a>
+                    <a href="#content-creator">As a Content Creator</a>
+                    <a href="#affiliate">As an Affiliate Partner</a>
+
+                    <div style="margin-top: 30px;">
+                        <h3>Ways You Can Pay</h3>
+                        <div class="payment-methods">
+                            <div class="payment-icon" style="background: #003087; color: white;">PayPal</div>
+                            <div class="payment-icon"
+                                style="background: linear-gradient(to right, #EB001B, #F79E1B); color: white;">MC</div>
+                            <div class="payment-icon" style="background: #1A1F71; color: white;">VISA</div>
+                            <div class="payment-icon" style="background: #0077A6; color: white;">Mastro</div>
+                            <div class="payment-icon" style="background: #006FCF; color: white;">AMEX</div>
+                            <div class="payment-icon" style="background: #CC0000; color: white;">JCB</div>
+                            <div class="payment-icon" style="background: #FF6000; color: white;">Discover</div>
+                            <div class="payment-icon" style="background: #FF5A00; color: white;">Klarna</div>
+                            <div class="payment-icon" style="background: #5F6368; color: white;">GPay</div>
+                            <div class="payment-icon" style="background: #000000; color: white;">APay</div>
+                            <div class="payment-icon" style="background: #CB2026; color: white;">iDEAL</div>
+                            <div class="payment-icon"
+                                style="background: linear-gradient(135deg, #00BAF2, #0082CA); color: white;">Paytm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2008 – 2026 GetYourGuide. Made With Responsive-u-Makkal Crew.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+<script src="availability.js"></script>
+</body>
+</html>
