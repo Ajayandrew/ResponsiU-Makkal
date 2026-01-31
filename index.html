@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Guide - Discover & Book Things To Do</title>
+    <link rel="icon" href="./Images/index icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!--Style Sheet-->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo"><img src="./Images/Header-image.svg" alt="header image"></div>
+            <div>
+                <nav class="nav-menu">
+                    <a href="./index.html">Home</a>
+                    <a href="./activity.html">Activity</a>
+                    <a href="./availability.html">Availability</a>
+                    <a href="./traveller.html">Traveller</a>
+                    <a href="./bookings.html">MyBooking</a>
+                    <nav>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn">
+                    <span class="icon">♡</span>
+                    <span>Wishlist</span>
+                </button>
+                <button class="icon-btn">
+                    <span class="icon">🛒</span>
+                    <span>Cart</span>
+                </button>
+                <button class="icon-btn">
+                    <span class="icon">🌐</span>
+                    <span>EN</span>
+                </button>
+                <nav class="navbar-dropdown">
+                    <div class="profile-container">
+                        <div class="profile-trigger">
+                            <img src="./Images/profile (2).png" alt="Profile" class="profile-icon">
+                            <p>Profile</p>
+                        </div>
+                        <div class="dropdown-box">
+                            <div class="dropdown-content">
+                                <h3>Profile</h3>
+                                <p>Manage your bookings and wishes</p>
+                                <hr>
+                                <a href="./login.html" class="btn-signup">Sign up | Log in</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div>
+                <audio id="myAudio" src="./upbeat-guitar-melody-60sec-474603.mp3" type="audio/mpeg"></audio>
+                <button id="audio-btn" onclick="togglePlay()">🎶</button>
+                <p></p>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover & book things to do</h1>
+            <div class="search-box">
+                <input type="text" id="heroSearch" placeholder="Find places and things to do">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <h1>Things to do wherever you're going</h1>
+
+            <div class="cards-grid" id="slider-upper">
+
+                <div class="card"><a href="./india.html" alt="./india.html"> <img src="./Images/delhi.jpg" alt="delhi"
+                            class="card-image">
+                        <h2 class="card-title">India</h2>
+                    </a>
+
+                </div>
+
+                <div class="card"><a href="./rome.html" alt="./rome.html"><img src="./Images/rome.jpg" alt="Rome"
+                            class="card-image">
+                        <h2 class="card-title">Rome</h2>
+                    </a>
+
+                </div>
+
+                <div class="card"><a href="./paris.html" alt="./paris.html"><img src="./Images/paris.jpg" alt="paris"
+                            class="card-image">
+                        <h2 class="card-title">Paris</h2>
+                    </a>
+
+                </div>
+
+                <div class="card"><a href="./amsterdam.html" alt="./amesterdam.html"><img src="./Images/amsterdam.jpg"
+                            alt="Amsterdam" class="card-image">
+                        <h2 class="card-title">Amsterdam</h2>
+                    </a>
+
+                </div>
+
+                <div class="card"><a href="./new york city.html" alt="./new york city.html"> <img
+                            src="./Images/New york city.jpg" alt="New York City" class="card-image">
+                        <h2 class="card-title">New York City</h2>
+                    </a>
+
+                </div>
+
+                <div class="card"><a href="./boston.html" alt="boston"><img src="./Images/boston.jpg" alt="Boston"
+                            class="card-image">
+                        <h2 class="card-title">Boston</h2>
+                    </a>
+
+                </div>
+
+                <div class="card"><a href="./Chicago.html" alt="chicago"> <img src="./Images/chichago.jpg" alt="Chicago"
+                            class="card-image">
+                        <h2 class="card-title">Chicago</h2>
+                    </a>
+
+                </div>
+
+
+                <div class="card"><a href="./singapore.html"> <img src="./Images/singapore.jpg" alt="Singapore"
+                            class="card-image">
+                        <h2 class="card-title">Singapore</h2>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Attraction contaier -->
+    <section class="container3">
+        <h2 class="title">Attractions you can't miss</h2>
+
+        <div class="slider-wrapper">
+            <div class="slider">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="./Images/statue of liberty.jpg" alt="Statue of Liberty">
+                    </div>
+                    <h3>Statue of Liberty</h3>
+                    <p>168 activities</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img src="./Images/vactim img.jpg" alt="Vatican Museums">
+                    </div>
+                    <h3>Vatican Museums</h3>
+                    <p>523 activities</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img src="./Images/paris.jpg" alt="paris">
+                    </div>
+                    <h3>Eiffel Tower</h3>
+                    <p>508 activities</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img src="./Images/metro politan.jpg" alt="Metropolitan Museum">
+                    </div>
+                    <h3>Metropolitan Museum of Art</h3>
+                    <p>59 activities</p>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <img src="./Images/united capital.jpg" alt="United Capital">
+                    </div>
+                    <h3>United States capital</h3>
+                    <p>80 activities</p>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="prev"
+                    onclick="document.querySelector('.slider').scrollBy({left: -300, behavior: 'smooth'})">❮</button>
+                <button class="next"
+                    onclick="document.querySelector('.slider').scrollBy({left: 300, behavior: 'smooth'})">❯</button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-Section -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Language and Currency Section -->
+                <div class="footer-section">
+                    <div class="dropdown-group">
+                        <div class="dropdown-wrapper">
+                            <label for="language">Language</label>
+                            <select id="language">
+                                <option value="en-us">English (United States)</option>
+                                <option value="en-gb">English (United Kingdom)</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="it">Italiano</option>
+                            </select>
+                        </div>
+                        <div class="dropdown-wrapper">
+                            <label for="currency">Currency</label>
+                            <select id="currency">
+                                <option value="inr">Indian Rupee (₹)</option>
+                                <option value="usd">US Dollar ($)</option>
+                                <option value="eur">Euro (€)</option>
+                                <option value="gbp">British Pound (£)</option>
+                                <option value="jpy">Japanese Yen (¥)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Section -->
+                <div class="footer-section">
+                    <h3>Mobile</h3>
+                    <div class="mobile-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.getyourguide.android&hl=en_IN"
+                            class="app-button1">
+                            <img src="./Images/Google_Play_Store.png" alt="Get it on Google Play">
+                        </a>
+                        <a href="https://apps.apple.com/in/app/getyourguide-plan-book/id705079381" class="app-button2">
+                            <img src="./Images/the-app-store.svg" alt="Download on the App Store">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="./contact.html">Contact</a>
+                    <a href="./legal notice.html">Legal Notice</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#cookies">Cookies and Marketing Preferences</a>
+                    <a href="#terms">General Terms and Conditions</a>
+                    <a href="#dsa">Information according to the Digital Services Act</a>
+                    <a href="#sitemap">Sitemap</a>
+                    <a href="#privacy-info">Do not Sell or Share my Personal Information</a>
+                </div>
+
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#about">About Us</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#press">Press</a>
+                    <a href="#gift-cards">Gift Cards</a>
+                    <a href="#explorer">Explorer</a>
+                </div>
+
+                <!-- Work With Us Section -->
+                <div class="footer-section">
+                    <h3>Work With Us</h3>
+                    <a href="#supply-partner">As a Supply Partner</a>
+                    <a href="#content-creator">As a Content Creator</a>
+                    <a href="#affiliate">As an Affiliate Partner</a>
+
+                    <div style="margin-top: 30px;">
+                        <h3>Ways You Can Pay</h3>
+                        <div class="payment-methods">
+                            <div class="payment-icon" style="background: #003087; color: white;">PayPal</div>
+                            <div class="payment-icon"
+                                style="background: linear-gradient(to right, #EB001B, #F79E1B); color: white;">MC</div>
+                            <div class="payment-icon" style="background: #1A1F71; color: white;">VISA</div>
+                            <div class="payment-icon" style="background: #0077A6; color: white;">Mastro</div>
+                            <div class="payment-icon" style="background: #006FCF; color: white;">AMEX</div>
+                            <div class="payment-icon" style="background: #CC0000; color: white;">JCB</div>
+                            <div class="payment-icon" style="background: #FF6000; color: white;">Discover</div>
+                            <div class="payment-icon" style="background: #FF5A00; color: white;">Klarna</div>
+                            <div class="payment-icon" style="background: #5F6368; color: white;">GPay</div>
+                            <div class="payment-icon" style="background: #000000; color: white;">APay</div>
+                            <div class="payment-icon" style="background: #CB2026; color: white;">iDEAL</div>
+                            <div class="payment-icon"
+                                style="background: linear-gradient(135deg, #00BAF2, #0082CA); color: white;">Paytm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2008 – 2026 GetYourGuide. Made With Responsive-u-Makkal Crew.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="./index.js">
+
+    </script>
+</body>
+
+</html>

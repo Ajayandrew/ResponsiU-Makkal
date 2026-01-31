@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Amsterdam | Travel Guide</title>
+    <style>
+        :root {
+            --primary: #c0392b;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: var(--dark);
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('./Images/amsterdam.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: -50px auto 50px;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Amsterdam</h1>
+        <p>The Venice of the North</p>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>Welcome to the City of Canals</h2>
+            <p>From its artistic heritage and elaborate canal system to its narrow houses with gabled facades, Amsterdam is one of Europe's most unique destinations. Explore the history, the tulips, and the vibrant culture of the Netherlands' capital.</p>
+        </section>
+
+        <div class="attractions-grid">
+            <div class="card">
+                <img src="./Images/amsterdam canel ring.avif" alt="Amsterdam Canals">
+                <div class="card-content">
+                    <h3>The Canal Ring</h3>
+                    <p>A UNESCO World Heritage site, the 17th-century canal district is the heart of the city's charm. Perfect for boat tours or evening walks.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/amsterdam Rijksmuseum.avif" alt="Rijksmuseum">
+                <div class="card-content">
+                    <h3>Rijksmuseum</h3>
+                    <p>The national museum of the Netherlands dedicated to Dutch arts and history, featuring masterpieces by Rembrandt and Vermeer.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/amsterdam Anne Frank House.avif" alt="Anne Frank House">
+                <div class="card-content">
+                    <h3>Anne Frank House</h3>
+                    <p>A somber and powerful historic site where Anne Frank and her family hid during WWII. It remains one of the city's most visited landmarks.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/amsterdam Tulips & Gardens.avif" alt="Tulip Gardens">
+                <div class="card-content">
+                    <h3>Tulips & Gardens</h3>
+                    <p>Experience the iconic Dutch flower culture. While Keukenhof is a short trip away, the city's flower markets are a year-round delight.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Amsterdam Discovery Guide</p>
+    </footer>
+
+</body>
+</html>

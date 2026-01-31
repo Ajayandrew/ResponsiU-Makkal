@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Boston | The Hub</title>
+    <style>
+        :root {
+            --boston-blue: #002244;
+            --brick-red: #a32638;
+            --slate: #4b4b4b;
+            --cream: #f9f7f2;
+            --shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        body {
+            font-family: 'Crimson Text', serif, 'Georgia', serif;
+            line-height: 1.8;
+            margin: 0;
+            background-color: var(--cream);
+            color: var(--slate);
+        }
+
+        header {
+            background: linear-gradient(rgba(0,34,68,0.7), rgba(163,38,56,0.5)), 
+                        url('./Images/boston.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+            border-bottom: 5px solid var(--brick-red);
+        }
+
+        header h1 {
+            font-size: 4.5rem;
+            margin: 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: -60px auto 60px;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background: white;
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 50px;
+            text-align: center;
+            border-left: 10px solid var(--boston-blue);
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            color: var(--boston-blue);
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--brick-red);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: var(--boston-blue);
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            margin-top: 70px;
+        }
+
+        .city-seal {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BOSTON</h1>
+        <p style="font-style: italic; font-size: 1.4rem;">Where History Lives</p>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>Experience American Heritage</h2>
+            <p>From the cobblestone streets of <strong>Beacon Hill</strong> to the legendary Green Monster at <strong>Fenway Park</strong>, Boston is a city where every corner tells a story of revolution, innovation, and triumph.</p>
+        </section>
+
+        <div class="attractions-grid">
+            <div class="card">
+                <img src="./Images/boston The Freedom Trail.jpg" alt="Freedom Trail">
+                <div class="card-content">
+                    <h3>The Freedom Trail</h3>
+                    <p>A 2.5-mile path that winds through 16 historically significant sites, telling the story of the American Revolution.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/boston Fenway Park.webp" alt="Fenway Park">
+                <div class="card-content">
+                    <h3>Fenway Park</h3>
+                    <p>America's most beloved ballpark and home to the Red Sox. A cathedral of baseball with history built into its walls.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/boston Faneuil Hall.webp" alt="Quincy Market">
+                <div class="card-content">
+                    <h3>Faneuil Hall</h3>
+                    <p>The "Cradle of Liberty" and home to Quincy Market, where historic speeches meet world-class local cuisine.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/boston Public Garden.webp" alt="Swan Boats">
+                <div class="card-content">
+                    <h3>Public Garden</h3>
+                    <p>The first public botanical garden in America, famous for its Swan Boats and picturesque Victorian landscapes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="city-seal">SICUT PATRIBUS SIT DEUS NOBIS</p>
+        <p>&copy; 2026 Boston Heritage Travel</p>
+    </footer>
+
+</body>
+</html>
