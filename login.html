@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link type="icon" rel="title icon" href="./Images/profile (2).png">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Create Your Login Account</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <div class="error-message" id="nameError">Name is required</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <div class="error-message" id="passwordError">Password must be at least 6 characters</div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+            </div>
+
+            <button onclick="buttonclicked()" type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+        <div class="success-message" id="successMessage">SuccessFully Created Account
+           
+        </div>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('./Images/tajmahal.jpg');
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-image: url('./images/pexels-pixabay-60027.jpg');
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color:black;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color:black;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        input.error {
+            border-color: #e74c3c;
+        }
+
+        input.valid {
+            border-color: #2ecc71;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-weight:200px;
+            font-size: 13px;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        button {
+            width:100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #0834fc 0%, #6503c7 100%);
+            color:rgb(255, 255, 255);
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.3s;
+        }
+
+        button:hover:not(:disabled) {
+            transform: translateY(-2px);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .success-message {
+            background: #2ecc71;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+    </style>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+        const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+        let validations = {
+            name: false,
+            email: false,
+            password: false,
+            confirmPassword: false
+        };
+
+        function validateName() {
+            const value = nameInput.value.trim();
+            if (value === '') {
+                nameInput.classList.add('error');
+                nameInput.classList.remove('valid');
+                nameError.classList.add('show');
+                validations.name = false;
+            } else {
+                nameInput.classList.remove('error');
+                nameInput.classList.add('valid');
+                nameError.classList.remove('show');
+                validations.name = true;
+            }
+            updateSubmitButton();
+        }
+
+        function validateEmail() {
+            const value = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(value)) {
+                emailInput.classList.add('error');
+                emailInput.classList.remove('valid');
+                emailError.classList.add('show');
+                validations.email = false;
+            } else {
+                emailInput.classList.remove('error');
+                emailInput.classList.add('valid');
+                emailError.classList.remove('show');
+                validations.email = true;
+            }
+            updateSubmitButton();
+        }
+
+        function validatePassword() {
+            const value = passwordInput.value;
+            if (value.length < 6) {
+                passwordInput.classList.add('error');
+                passwordInput.classList.remove('valid');
+                passwordError.classList.add('show');
+                validations.password = false;
+            } else {
+                passwordInput.classList.remove('error');
+                passwordInput.classList.add('valid');
+                passwordError.classList.remove('show');
+                validations.password = true;
+            }
+            if (confirmPasswordInput.value !== '') {
+                validateConfirmPassword();
+            }
+            updateSubmitButton();
+        }
+
+        function validateConfirmPassword() {
+            const value = confirmPasswordInput.value;
+            const passwordValue = passwordInput.value;
+            
+            if (value === '' || value !== passwordValue) {
+                confirmPasswordInput.classList.add('error');
+                confirmPasswordInput.classList.remove('valid');
+                confirmPasswordError.classList.add('show');
+                validations.confirmPassword = false;
+            } else {
+                confirmPasswordInput.classList.remove('error');
+                confirmPasswordInput.classList.add('valid');
+                confirmPasswordError.classList.remove('show');
+                validations.confirmPassword = true;
+            }
+            updateSubmitButton();
+        }
+
+        function updateSubmitButton() {
+            if (validations.name && validations.email && validations.password && validations.confirmPassword) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+
+        nameInput.addEventListener('input', validateName);
+        nameInput.addEventListener('blur', validateName);
+
+        emailInput.addEventListener('input', validateEmail);
+        emailInput.addEventListener('blur', validateEmail);
+
+        passwordInput.addEventListener('input', validatePassword);
+        passwordInput.addEventListener('blur', validatePassword);
+
+        confirmPasswordInput.addEventListener('input', validateConfirmPassword);
+        confirmPasswordInput.addEventListener('blur', validateConfirmPassword);
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            successMessage.classList.add('show');
+            
+            setTimeout(() => {
+                form.reset();
+                nameInput.classList.remove('valid');
+                emailInput.classList.remove('valid');
+                passwordInput.classList.remove('valid');
+                confirmPasswordInput.classList.remove('valid');
+                validations = { name: false, email: false, password: false, confirmPassword: false };
+                updateSubmitButton();
+                successMessage.classList.remove('show');
+            }, 3000);
+        });
+
+        //event Handler
+        var alertmessage = document.getElementById("submitBtn")
+
+        function buttonclicked(){
+            alert("SuccessFully Created Account")
+
+        }
+        
+    </script>
+</body>
+</html>

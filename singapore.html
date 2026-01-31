@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Singapore | City in a Garden</title>
+    <style>
+        :root {
+            --orchid-purple: #8e44ad;
+            --lush-green: #27ae60;
+            --tropical-teal: #16a085;
+            --clean-white: #ffffff;
+            --slate-gray: #34495e;
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f4fcf6;
+            color: var(--slate-gray);
+        }
+
+        header {
+            /* Futuristic Skyline Header */
+            background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(39, 174, 96, 0.4)), 
+                        url('./Images/singapore.Merlion\ Park.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+            border-bottom: 6px solid var(--orchid-purple);
+        }
+
+        header h1 {
+            font-size: 4.5rem;
+            margin: 0;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 20px;
+            border-radius: 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: -70px auto 60px;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background:linear-gradient(rgb(132, 214, 230));
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative top bar for intro */
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, var(--lush-green), var(--orchid-purple));
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .card {
+            background: var(--clean-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(39, 174, 96, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            color: var(--lush-green);
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--orchid-purple);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: var(--clean-white);
+            text-align: center;
+            padding: 60px 0;
+            margin-top: 80px;
+            border-top: 10px solid var(--lush-green);
+        }
+
+        .footer-logo {
+            font-weight: 900;
+            letter-spacing: 3px;
+            font-size: 1.2rem;
+            color: var(--lush-green);
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Singapore</h1>
+        <p>Where Future Meets Nature</p>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>The Garden City</h2>
+            <p>Experience a world where nature and technology blend seamlessly. From the futuristic Supertrees to the heritage shophouses of Chinatown, Singapore is a dynamic multicultural hub of food, shopping, and green innovation.</p>
+        </section>
+
+        <div class="attractions-grid">
+            <div class="card">
+                <img src="./Images/Singapore Gardens by the Bay.webp" alt="Supertrees">
+                <div class="card-content">
+                    <span class="tag">Nature Park</span>
+                    <h3>Gardens by the Bay</h3>
+                    <p>Wander beneath the 50-meter-tall Supertrees and visit the world's largest glass greenhouse, featuring a man-made mountain and waterfall.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/singapore Marina Bay Sands.webp" alt="Marina Bay Sands">
+                <div class="card-content">
+                    <span class="tag">Iconic Landmark</span>
+                    <h3>Marina Bay Sands</h3>
+                    <p>The crown jewel of the skyline. Take in panoramic views from the SkyPark Observation Deck or marvel at the ship-like structure atop three towers.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/singapore Jewel Changi.png" alt="Jewel Rain Vortex">
+                <div class="card-content">
+                    <span class="tag">Architecture</span>
+                    <h3>Jewel Changi</h3>
+                    <p>More than an airport—a destination itself. Witness the Rain Vortex, the world's tallest indoor waterfall, surrounded by a lush forest valley.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/singapore.Merlion Park.jpg" alt="Merlion Statue">
+                <div class="card-content">
+                    <span class="tag">Heritage</span>
+                    <h3>Merlion Park</h3>
+                    <p>Snap a photo with Singapore's mythical mascot—half lion, half fish—spouting water into the bay against the backdrop of the city skyline.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-logo">MAJULAH SINGAPURA</p>
+        <p>&copy; 2026 Lion City Travel Guide</p>
+    </footer>
+
+</body>
+</html>

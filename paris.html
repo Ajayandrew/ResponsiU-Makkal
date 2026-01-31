@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Paris | The City of Light</title>
+    <style>
+        :root {
+            --primary: #2c3e50; /* Deep Parisian Blue */
+            --accent: #d4af37;  /* Metallic Gold */
+            --light: #fdfcfb;
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Georgia', serif; /* Classic elegant feel */
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--light);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('./Images/pexels-pixabay-60027.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        header h1 {
+            font-size: 4.5rem;
+            margin-bottom: 5px;
+            font-weight: 300;
+            letter-spacing: 8px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: -60px auto 60px;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background: white;
+            padding: 50px;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            margin-bottom: 50px;
+            text-align: center;
+            border-top: 4px solid var(--accent);
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            filter: sepia(10%); /* Subtle vintage touch */
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.6rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: var(--primary);
+            color: var(--accent);
+            text-align: center;
+            padding: 50px 0;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.8rem; }
+            .intro { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Paris</h1>
+        <p>L'Art de Vivre</p>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>Experience the Romance of France</h2>
+            <p>From the iconic iron silhouette of the Eiffel Tower to the cobblestone streets of Montmartre, Paris is an open-air museum. Dive into world-class art, unmatched gastronomy, and centuries of revolutionary history in the heart of France.</p>
+        </section>
+
+        <div class="attractions-grid">
+            <div class="card">
+                <img src="./Images/paris.jpg" alt="paris">
+                <div class="card-content">
+                    <h3>La Tour Eiffel</h3>
+                    <p>The global symbol of France. Whether viewed from the Trocadéro at sunrise or sparkling with lights at night, it remains the city's most breathtaking marvel.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/paris Musée du Louvre.avif" alt="The Louvre">
+                <div class="card-content">
+                    <h3>Musée du Louvre</h3>
+                    <p>The world's largest art museum and a historic monument. Home to the Mona Lisa and the Venus de Milo, housed within a magnificent former royal palace.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/paris Notre-Dame de Paris.avif" alt="Notre Dame Cathedral">
+                <div class="card-content">
+                    <h3>Notre-Dame de Paris</h3>
+                    <p>A masterpiece of French Gothic architecture. Standing on the Île de la Cité, its towers and stained glass have watched over the city for centuries.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Images/paris Sacré-Cœur & Montmartre.avif" alt="Sacre Coeur Montmartre">
+                <div class="card-content">
+                    <h3>Sacré-Cœur & Montmartre</h3>
+                    <p>Perched on a hill, this white basilica offers the best panoramic views of Paris. Explore the winding alleys where Picasso and Dalí once lived.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Paris Excellence Travel</p>
+    </footer>
+
+</body>
+</html>
