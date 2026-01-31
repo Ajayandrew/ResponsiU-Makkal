@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get Your Guide</title>
+
+    <link rel="stylesheet" href="activity.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+
+
+
+
+  <body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo"><img src="./Header-image.svg" alt="header image"></div>
+            <div>
+                <nav class="nav-menu">
+                    <a href="#">Activity</a>
+                    <a href="#">Availability</a>
+                    <a href="#">Travel</a>
+                    <a href="#">MyBooking</a>
+                    <nav>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn">
+                    <span class="icon">♡</span>
+                    <span>Wishlist</span>
+                </button>
+                <button class="icon-btn">
+                    <span class="icon">🛒</span>
+                    <span>Cart</span>
+                </button>
+                <button class="icon-btn">
+                    <span class="icon">🌐</span>
+                    <span>EN</span>
+                </button>
+                <button class="icon-btn">
+                    <span class="icon">👤</span>
+                    <span>Profile</span>
+                    <span class="badge">1</span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- PAGE 1 -->
+    <div id="page1" class="page active">
+      <h2 class="home-heading">Choose your destination 🌍</h2>
+
+      <div class="home-grid">
+        <!-- FRANCE -->
+        <div
+          class="card first-card"
+          data-country="france"
+          onclick="openCountry(this)"
+        >
+          <i
+            class="fa-solid fa-heart card-heart"
+            onclick="toggleHeart(this); event.stopPropagation();"
+          ></i>
+          <h2 class="title">Explore more in France</h2>
+          <img
+            src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
+            class="card-img"
+            alt="France"
+          />
+          <div class="card-info">
+            <h3>Paris City Highlights</h3>
+            <div class="rating">⭐ 4.8 (12,345)</div>
+          </div>
+        </div>
+
+        <!-- RUSSIA -->
+        <div
+          class="card first-card"
+          data-country="russia"
+          onclick="openCountry(this)"
+        >
+          <i
+            class="fa-solid fa-heart card-heart"
+            onclick="toggleHeart(this); event.stopPropagation();"
+          ></i>
+          <h2 class="title">Explore more in Russia</h2>
+          <img
+            src="https://images.unsplash.com/photo-1547448415-e9f5b28e570d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="card-img"
+            alt="Russia"
+          />
+          <div class="card-info">
+            <h3>Moscow City Highlights</h3>
+            <div class="rating">⭐ 4.7 (9,876)</div>
+          </div>
+        </div>
+
+        <!-- ITALY -->
+        <div
+          class="card first-card"
+          data-country="italy"
+          onclick="openCountry(this)"
+        >
+          <i
+            class="fa-solid fa-heart card-heart"
+            onclick="toggleHeart(this); event.stopPropagation();"
+          ></i>
+          <h2 class="title">Explore more in Italy</h2>
+          <img
+            src="https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="card-img"
+            alt="Italy"
+          />
+          <div class="card-info">
+            <h3>Rome City Highlights</h3>
+            <div class="rating">⭐ 4.8 (8,200)</div>
+          </div>
+        </div>
+
+        <!-- JAPAN -->
+        <div
+          class="card first-card"
+          data-country="japan"
+          onclick="openCountry(this)"
+        >
+          <i
+            class="fa-solid fa-heart card-heart"
+            onclick="toggleHeart(this); event.stopPropagation();"
+          ></i>
+          <h2 class="title">Explore more in Japan</h2>
+          <img
+            src="https://images.unsplash.com/photo-1549693578-d683be217e58?q=80&w=1200&auto=format&fit=crop"
+            class="card-img"
+            alt="Japan"
+          />
+          <div class="card-info">
+            <h3>Tokyo City Highlights</h3>
+            <div class="rating">⭐ 4.9 (14,500)</div>
+          </div>
+        </div>
+
+        
+
+        <!-- INDIA -->
+        <div
+          class="card first-card"
+          data-country="india"
+          onclick="openCountry(this)"
+        >
+          <i
+            class="fa-solid fa-heart card-heart"
+            onclick="toggleHeart(this); event.stopPropagation();"
+          ></i>
+          <h2 class="title">Explore more in India</h2>
+          <img
+            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1200&auto=format&fit=crop"
+            class="card-img"
+            alt="India"
+          />
+          <div class="card-info">
+            <h3>Taj Mahal Highlights</h3>
+            <div class="rating">⭐ 4.9 (20,000)</div>
+          </div>
+        </div>
+
+        
+    <!-- PAGE 2 -->
+    <div id="page2" class="page">
+      <header class="header">
+        <div class="logo">GetYourGuide</div>
+        <h1 class="travel-title" id="countryName">Travelling diary</h1>
+
+        <div class="icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-regular fa-user"></i>
+        </div>
+      </header>
+
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search activities, tours..." />
+        <button>Search</button>
+      </div>
+
+      <div class="topbar">
+        <button onclick="go('featured')">Featured</button>
+        <button onclick="go('museum')">Museum</button>
+        <button onclick="go('day')">Day Tours</button>
+        <button onclick="go('night')">Night Tours</button>
+        <button onclick="openCal()">Date</button>
+      </div>
+
+      <div class="section" id="featured">
+        <h2 class="PICS" id="countryTitle">BEAUTIFUL PICS</h2>
+        <div class="grid" id="featuredGrid"></div>
+      </div>
+
+      <div class="section" id="museum">
+        <h2 class="PICS">Museum</h2>
+        <div class="grid" id="museumGrid"></div>
+      </div>
+
+      <div class="section" id="day">
+        <h2 class="PICS">Day Tours</h2>
+        <div class="grid" id="dayGrid"></div>
+      </div>
+
+      <div class="section" id="night">
+        <h2 class="PICS">Night Tours</h2>
+        <div class="grid" id="nightGrid"></div>
+      </div>
+
+      <!-- CALENDAR -->
+      <div class="overlay" id="overlay">
+        <div class="calendar">
+          <div class="close" onclick="closeCal()">X</div>
+          <div class="cal-head">
+            <button onclick="prev()">‹</button>
+            <div id="month"></div>
+            <button onclick="next()">›</button>
+          </div>
+          <div class="grid-cal" id="days"></div>
+        </div>
+      </div>
+       <div class="reviews-container">
+    <!-- Review Card -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="avatar">A</div>
+        <div>
+          <h4>Andrea</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+
+      <p class="review-text">
+        We had a wonderful time. The meeting location was easy to find,
+        the guide was super friendly.
+      </p>
+
+      <div class="review-images">
+        <img src="https://picsum.photos/80/80?1">
+        <img src="https://picsum.photos/80/80?2">
+      </div>
+    </div>
+
+    <!-- Review Card -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="avatar">O</div>
+        <div>
+          <h4>Olivia</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+
+      <p class="review-text">
+        The venue was incredible. The music and atmosphere were magical.
+      </p>
+
+      <div class="review-images">
+        <img src="https://picsum.photos/80/80?3">
+        <img src="https://picsum.photos/80/80?4">
+      </div>
+    </div>
+
+    <!-- Review Card -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="avatar">K</div>
+        <div>
+          <h4>Kevin</h4>
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+
+      <p class="review-text">
+        Making pasta was so much fun. Chef Ricardo was amazing!
+      </p>
+
+      <div class="review-images">
+        <img src="https://picsum.photos/80/80?5">
+        <img src="https://picsum.photos/80/80?6">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <footer class="footer">
+        <div class="footer-bottom">
+          <p>© 2008–2026 TravelGuide. Made with ❤️</p>
+        </div>
+      </footer>
+    </div>
+
+ <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2008 – 2026 GetYourGuide. Made With Responsive-u-Makkal Crew.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="activity.js"></script>
+
+
+
+  </body>
+</html>
