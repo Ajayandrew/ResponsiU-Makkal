@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bookings.css">
+</head>
+<body>
+     
+    
+ <!-- Header -->
+   <header>
+  <div class="header-container">
+
+    <div class="logo">
+      <img src="./Images/Header-image.svg" alt="Logo" height="38">
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="activity.html">Activity</a>
+      <a href="availability.html">Availability</a>
+      <a href="traveller.html">Traveller</a>
+      <a href="bookings.html">My Bookings</a>
+    </nav>
+
+  </div>
+   </header>
+
+    
+<header class="header">
+  <h1>My Bookings</h1>
+
+  <div class="controls">
+    <select id="filterSelect">
+      <option value="all">All</option>
+      <option value="Confirmed">Confirmed</option>
+      <option value="Cancelled">Cancelled</option>
+      <option value="Completed">Completed</option>
+      <option value="Waiting">Waiting</option>
+    </select>
+
+    <select id="sortSelect">
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+    </select>
+
+    <button id="exportBtn">Export</button>
+  </div>
+</header>
+
+<section id="summary" class="summary"></section>
+
+<main id="bookingsContainer" class="bookings-container"></main>
+
+<p id="emptyState" class="empty-state">
+  No bookings found. Book an adventure 🌍
+</p>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+
+  <!-- Footer-Section -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Language and Currency Section -->
+                <div class="footer-section">
+                    <div class="dropdown-group">
+                        <div class="dropdown-wrapper">
+                            <label for="language">Language</label>
+                            <select id="language">
+                                <option value="en-us">English (United States)</option>
+                                <option value="en-gb">English (United Kingdom)</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="it">Italiano</option>
+                            </select>
+                        </div>
+                        <div class="dropdown-wrapper">
+                            <label for="currency">Currency</label>
+                            <select id="currency">
+                                <option value="inr">Indian Rupee (₹)</option>
+                                <option value="usd">US Dollar ($)</option>
+                                <option value="eur">Euro (€)</option>
+                                <option value="gbp">British Pound (£)</option>
+                                <option value="jpy">Japanese Yen (¥)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Mobile Section -->
+                <div class="footer-section">
+                    <h3>Mobile</h3>
+                    <div class="mobile-buttons">
+                        <a href="https://play.google.com/store/search?q=get+your+guide&c=apps&hl=en_IN"
+                            class="app-button1">
+                            <img src="./Images/Google_Play_Store.png" alt="Get it on Google Play">
+                        </a>
+                        <a href="https://apps.apple.com/in/app/getyourguide-plan-book/id705079381" class="app-button2">
+                            <img src="./Images/the-app-store.svg" alt="Download on the App Store">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="./contact.html">Contact</a>
+                    <a href="./legal notice.html">Legal Notice</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#cookies">Cookies and Marketing Preferences</a>
+                    <a href="#terms">General Terms and Conditions</a>
+                    <a href="#dsa">Information according to the Digital Services Act</a>
+                    <a href="#sitemap">Sitemap</a>
+                    <a href="#privacy-info">Do not Sell or Share my Personal Information</a>
+                </div>
+
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#about">About Us</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#press">Press</a>
+                    <a href="#gift-cards">Gift Cards</a>
+                    <a href="#explorer">Explorer</a>
+                </div>
+
+                <!-- Work With Us Section -->
+                <div class="footer-section">
+                    <h3>Work With Us</h3>
+                    <a href="#supply-partner">As a Supply Partner</a>
+                    <a href="#content-creator">As a Content Creator</a>
+                    <a href="#affiliate">As an Affiliate Partner</a>
+
+                    <div style="margin-top: 30px;">
+                        <h3>Ways You Can Pay</h3>
+                        <div class="payment-methods">
+                            <div class="payment-icon" style="background: #003087; color: white;">PayPal</div>
+                            <div class="payment-icon"
+                                style="background: linear-gradient(to right, #EB001B, #F79E1B); color: white;">MC</div>
+                            <div class="payment-icon" style="background: #1A1F71; color: white;">VISA</div>
+                            <div class="payment-icon" style="background: #0077A6; color: white;">Mastro</div>
+                            <div class="payment-icon" style="background: #006FCF; color: white;">AMEX</div>
+                            <div class="payment-icon" style="background: #CC0000; color: white;">JCB</div>
+                            <div class="payment-icon" style="background: #FF6000; color: white;">Discover</div>
+                            <div class="payment-icon" style="background: #FF5A00; color: white;">Klarna</div>
+                            <div class="payment-icon" style="background: #5F6368; color: white;">GPay</div>
+                            <div class="payment-icon" style="background: #000000; color: white;">APay</div>
+                            <div class="payment-icon" style="background: #CB2026; color: white;">iDEAL</div>
+                            <div class="payment-icon"
+                                style="background: linear-gradient(135deg, #00BAF2, #0082CA); color: white;">Paytm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2008 – 2026 GetYourGuide. Made With Responsive-u-Makkal Crew.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="bookings.js"></script>
+
+
+
+
+</body>
+</html>
